@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <!-- Título que aparece en la pestaña del navegador -->
+        <title>Casey Reas | Código y sistemas</title>
+
+        <!-- Hoja de estilos -->
+        <link href="css/estilos.css" rel="stylesheet">
+
+        <!-- Tipografías de Google Fonts -->
+
+    </head>
+
+    <body>
+
+        <!-- Contenedor general de todo el sitio -->
+        <div class="contenedor">
+
+            <!-- Encabezado y menú de navegación -->
+            <header>
+
+                <h1>Casey Reas - Código, sistemas y arte generativo contemporáneo</h1>
+
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="codigo-sistemas.html">Código y Sistemas</a></li>
+                        <li><a href="influencia.html">Influencia</a></li>
+                    </ul>
+                </nav>
+                
+            </header>
+
+            <hr>
+
+            <!-- Contenido principal de la página -->
+            <main>
+                
+                <h2>¿Cómo funciona el arte de Casey Reas?</h2>
+                
+                <!-- Explicación sobre los sistemas interactivos -->
+                <article>
+
+                    <h3>El código como sistema visual</h3>
+
+                    <p>El enfoque de Casey Reas se basa en la creación de instrucciones que definen comportamientos visuales. En lugar de diseñar una imagen de forma directa, desarrolla algoritmos que determinan cómo los elementos se relacionan, se mueven y evolucionan en el tiempo. Este método convierte al código en el núcleo del proceso creativo.</p>
+
+                    <p>A partir de reglas simples, sus sistemas pueden generar resultados complejos e impredecibles. Esta lógica permite explorar la emergencia, donde patrones y formas surgen de la interacción entre componentes. El resultado es una obra que no está completamente controlada, sino que se desarrolla dentro de un marco definido.</p>
+
+                </article>
+
+                <!-- Información sobre lsistema, reglas y variación -->
+                <article>
+
+                    <h3>Sistemas, reglas y variación</h3>
+
+                    <p>El trabajo de Casey Reas se fundamenta en la idea de que una obra puede ser entendida como un sistema de reglas. Estas reglas definen las posibles interacciones entre los elementos visuales, permitiendo que la obra se genere a partir de su ejecución.</p>
+
+                    <p>Este enfoque introduce la variación como un elemento central. Cada vez que el sistema se ejecuta, puede producir un resultado diferente, lo que transforma la noción de originalidad y repetición en el arte digital.</p>
+
+                </article>
+
+                <!-- Contenedor de la imagen y elementos interactivos -->
+                <div id="contenedorCodigoSistemas"> <!--Se cambió contenedorTrayectoria por contenedorCodigoSistemas, CAMBIAR CSS. Igual que imagenTrayectoria-->
+
+                    <img id="imagenCodigoSistemas" src="img/reas-3.jpg" alt="Obra Casey Reas">
+
+                    <!-- Botón que obtiene un dato mediante JavaScript -->
+                    <button type="button" id="dato">Obtener dato curioso al azar</button>
+
+                    <!-- Aquí se muestra el resultado generado por JavaScript -->
+                    <span id="resultado"></span>
+
+                </div>
+
+                <div id="contenedor">
+                    <!-- Contenedor donde JavaScript genera dinámicamente las obras -->
+                </div>
+
+                <!-- Botón para cambiar el diseño de las obras -->
+                <button type="button" id="diseño">Cambiar diseño</button>
+
+            </main>
+
+            <hr>
+
+            <!-- Pie de página con datos de contacto y autoría -->
+            <footer>
+
+                <address>
+                    Para contactarse escribir a <a class="linkFooter" href="mailto:casey@artedigital.com">casey@artedigital.com</a>
+                </address>
+
+                <p><em>Artes Multimediales - Informática General - UNA</em></p>
+                <p><em>Gabriella La Rosa</em></p>
+                <p><em>2026</em></p>
+
+            </footer>
+
+        </div>
+
+        <!-- Archivo JavaScript con la interacción de la página -->
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
