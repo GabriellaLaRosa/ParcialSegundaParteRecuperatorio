@@ -9,19 +9,30 @@
 body {
     display: flex;
     justify-content: center;
+
+    /* Imagen que se repite como fondo */
     background-image: url("../img/fondo.png");
     background-color: rgb(0, 48, 73);
     background-repeat: repeat;
+
+    /* Tipografía general del sitio */
     font-family: "Montserrat", sans-serif;
 }
 
 /* Contenedor general del sitio */
 .contenedor {
+    /*tamaño*/
     width: 90%;
     max-width: 1200px;
+
+    /* Separación exterior e interior del contenedor */
     margin: 2rem 0;
     padding: 2rem;
+
+    /* Fondo semitransparente */
     background-color: rgba(0, 48, 73, .92);
+
+    /* Bordes redondeados y borde sutil */
     border-radius: 2rem;
     border: 1px solid rgba(234, 226, 183, .2);
 }
@@ -33,131 +44,182 @@ header {
 
 /* Estilos generales de los títulos */
 h1, h2, h3 {
+    /* Tipografía utilizada para los títulos */
     font-family: "Arvo", sans-serif;
+
+    /* Color crema de los títulos */
     color: rgb(234, 226, 183);
+
+    /* Separación inferior de los títulos */
     margin-bottom: 1.5rem;
 }
 
+/* Tamaño y altura de línea del título principal */
 h1 {
     font-size: 2.7rem;
     line-height: 1.2;
 }
 
+/* Tamaño y altura de línea de los subtítulos */
 h2 {
     font-size: 2rem;
     line-height: 1.3;
 }
 
+/* Tamaño y altura de línea de los títulos más pequeños */
 h3 {
     font-size: 1.5rem;
     line-height: 1.3;
 }
 
+/* Estilos generales para párrafos, address y elementos de lista */
 p, address, li {
     color: rgb(234, 226, 183);
     margin-bottom: 1rem;
     font-size: 1rem;
+
+    /* Aumenta el espacio entre las líneas para facilitar la lectura */
     line-height: 1.7;
 }
 
-/* Agrega separación inferior a las secciones */
+/* Agrega separación inferior a cada sección */
 section {
     margin-bottom: 3rem;
 }
 
-/* Agrega separación inferior a los artículos */
+
+/* Agrega separación inferior a cada artículo */
 article {
     margin-bottom: 2rem;
 }
 
-/* Barra de navegación */
+/* Organiza los enlaces del menú de navegación */
 .navbar {
     display: flex;
     justify-content: center;
+
+    /* Espacio entre los enlaces */
     gap: 2rem;
+
+    /* Elimina las viñetas de la lista */
     list-style: none;
+
+    /* Espaciado superior e inferior del menú */
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-/* Estilos generales de los enlaces */
+/* Estilos generales de todos los enlaces */
 a {
+    /* Elimina el subrayado predeterminado */
     text-decoration: none;
+
+    /* Espacio interno del enlace */
     padding: 0.7rem 1rem;
+
+    /* Redondea los bordes */
     border-radius: 1rem;
+
+    /* Suaviza los cambios de color */
     transition: .3s;
+
+    /* Tipografía y grosor de los enlaces */
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
 }
 
-/* Estado normal de los enlaces */
+/* Color de los enlaces que todavía no fueron visitados */
 a:link {
     color: rgb(92, 225, 230);
 }
 
-/* Estado de los enlaces ya visitados */
+/* Color de los enlaces que ya fueron visitados */
 a:visited {
     color: rgb(168, 218, 220);
 }
 
-/* Estado cuando el cursor pasa sobre el enlace */
+/* Apariencia del enlace cuando el cursor pasa por encima */
 a:hover {
     background-color: rgb(0, 194, 209);
     color: rgb(0, 48, 73);
 }
 
-/* Estado mientras se hace clic sobre el enlace */
+/* Apariencia del enlace mientras se hace clic */
 a:active {
     background-color: rgb(234, 226, 183);
     color: rgb(0, 48, 73);
 }
 
-/* Estados específicos del enlace del footer */
+/* Color normal del enlace del pie de página */
 .linkFooter:link {
     color: rgb(92, 225, 230);
 }
 
+/* Color del enlace del footer cuando ya fue visitado */
 .linkFooter:visited {
     color: rgb(179, 168, 220);
 }
 
+/* Apariencia del enlace del footer al pasar el cursor */
 .linkFooter:hover {
     background-color: rgb(0, 194, 209);
     color: rgb(0, 48, 73);
 }
 
+/* Apariencia del enlace del footer mientras se hace click */
 .linkFooter:active {
     background-color: rgb(234, 200, 183);
     color: rgb(26, 0, 73);
 }
 
-/* Estilos generales de las imágenes */
+/* Estilos generales de todas las imágenes del sitio */
 img {
+    /* Hace que la imagen ocupe el ancho disponible */
     width: 100%;
+
+    /* Mantiene la proporción original de la imagen */
     height: auto;
+
+    /* Redondea las esquinas */
     border-radius: 1rem;
+
+    /* Agrega un borde sutil */
     border: 1px solid rgba(234, 226, 183, .25);
+
+    /* Agrega una sombra suave */
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .2);
 }
 
-/* Estilos del video insertado */
+/* Estilos del video insertado mediante iframe */
 iframe {
+    /* Hace que el video ocupe todo el ancho disponible */
     width: 100%;
+
+    /* Define la altura del video */
     height: 18rem;
+
+    /* Elimina el borde predeterminado */
     border: none;
+
+    /* Redondea las esquinas del video */
     border-radius: 1rem;
 }
 
-/* Estilos generales de las listas */
+/* Estilos generales de las listas sin orden */
 ul {
+    /* Agrega sangría para separar el texto de las viñetas */
     padding-left: 2rem;
+
+    /* Define el color del texto de la lista */
     color: rgb(234, 226, 183);
 }
 
-/* Línea horizontal de separación */
+/* Estilos de la línea horizontal que separa contenidos */
 hr {
     margin-top: 2rem;
     margin-bottom: 2rem;
+
+    /* Define el grosor y color de la línea */
     border: 0.1rem solid rgb(234, 226, 183);
 }
 
@@ -166,12 +228,19 @@ footer {
     text-align: center;
 }
 
+/* Estilos generales de las citas */
 blockquote {
+    /* Agrega una línea vertical de color turquesa */
     border-left: 0.3rem solid rgb(0, 194, 209);
+
+    /* Separa el texto de la línea vertical */
     padding-left: 1.5rem;
+
+    /* Agrega separación superior e inferior */
     margin: 2rem 0;
 }
 
+/* Estilos del texto que se encuentra dentro de una cita */
 blockquote p {
     font-family: "Arvo", sans-serif;
     font-size: 1.15rem;
@@ -179,7 +248,7 @@ blockquote p {
     color: rgb(168, 218, 220);
 }
 
-/* Distribución de las tres secciones de la página de inicio */
+/* Distribuye las tres secciones de la página de inicio*/
 .inicio {
     display: flex;
     gap: 2rem;
@@ -191,32 +260,36 @@ blockquote p {
     flex: 1;
 }
 
-/* Distribución de las dos columnas de la página de influencia */
+/* Distribuye las dos columnas de la página de influencia */
 .influencia {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
 }
 
-/* Columna izquierda de la página de tecnología */
+/* Define la columna izquierda de la página de influencia */
 .izquierda {
     flex: 1;
 }
 
-/* Columna derecha de la página de tecnología */
+/* Define la columna derecha de la página de influencia */
 .derecha {
     flex: 2;
+
+    /* Organiza los elementos de la columna en dirección vertical */
     display: flex;
     flex-direction: column;
+
+    /* Espacio entre los elementos de la columna */
     gap: 2rem;
 }
 
-/* Separa la imagen del video */
+/* Separa la imagen del contenido que se encuentra arriba */
 .izquierda img {
     margin-top: 2rem;
 }
 
-/* Contenedor de la imagen y elementos interactivos */
+/* Contenedor de la imagen y de los elementos interactivos */
 #contenedorCodigoSistemas {
     display: flex;
     flex-direction: column;
@@ -224,58 +297,108 @@ blockquote p {
     gap: 2rem;
 }
 
-/*Contenedor de las imagenes de codigo y sistemas*/
+/* Contenedor de las imágenes de la sección Código y sistemas */
 #imagenCodigoSistemas {
     display: flex;
 }
 
-/* Tamaño y bordes de la imagen de codigo y sistemas */
+/* Tamaño y estilos de las imágenes de Código y sistemas */
 .imagenCodigoSistemas {
     width: 400px;
     height: 450px;
+
+    /* Redondea las esquinas de las imágenes */
     border-radius: 1rem;
+
+    /* Agrega separación alrededor de las imágenes */
     margin: 4rem;
+
+    /* Agrega un borde sutil */
     border: 1px solid rgba(234, 226, 183, .25);
 }
 
-/* Contenedor de las obras generadas dinámicamente */
+/* Contenedor donde se agregan las obras generadas dinámicamente */
 #contenedor {
     display: flex;
     justify-content: center;
+
+    /* Espacio entre las obras */
     gap: 1rem;
+
+    /* Permite que las obras pasen a otra línea si no entran */
     flex-wrap: wrap;
+
+    /* Separa el contenedor del contenido anterior */
     margin-top: 2rem;
 }
 
 /* Estilos generales de los botones */
 button {
+    /* Color de fondo del botón */
     background-color: rgb(0, 194, 209);
+
+    /* Color del texto */
     color: rgb(0, 48, 73);
+
+    /* Elimina el borde predeterminado */
     border: none;
+
+    /* Redondea las esquinas */
     border-radius: 1rem;
+
+    /* Espacio interno del botón */
     padding: .8rem 1.4rem;
+
+    /* Tipografía del botón */
     font-family: "Abel", sans-serif;
     font-size: 1.1rem;
+
+    /* Cambia el cursor al pasar sobre el botón */
     cursor: pointer;
+
+    /* Suaviza los cambios de apariencia */
     transition: .3s;
+
+    /* Hace que el texto se vea más grueso */
     font-weight: bold;
 }
 
-/* Cambio de apariencia del botón al pasar el cursor */
+/* Cambia la apariencia del botón cuando el cursor pasa por encima */
 button:hover {
     background-color: rgb(92, 225, 230);
     color: rgb(0, 48, 73);
 }
 
-/* Pequeña reducción del botón al hacer clic */
+/* Reduce levemente el tamaño del botón mientras se hace clic */
 button:active {
     transform: scale(.97);
 }
 
+/* Estilos del resultado que aparece después de utilizar JavaScript */
 #resultado {
+    /* Permite que el elemento conserve su tamaño según el contenido */
+    display: inline-block;
+
+    /* Separa el resultado del contenido anterior */
+    margin-top: 1rem;
+
+    /* Espacio interno del resultado */
+    padding: 1rem 1.5rem;
+
+    /* Fondo semitransparente */
+    background-color: rgba(255, 255, 255, .08);
+
+    /* Borde turquesa */
+    border: 2px solid rgb(0, 194, 209);
+
+    /* Redondea las esquinas */
+    border-radius: 1rem;
+
+    /* Color y tipografía del resultado */
     color: rgb(234, 226, 183);
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-family: "Abel", sans-serif;
+    font-size: 1.2rem;
+
+    /* Centra el texto del resultado */
     text-align: center;
 }
