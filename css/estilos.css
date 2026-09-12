@@ -48,3 +48,203 @@ h2 {
 h3 {
     font-size: 1.7rem;
 }
+
+/* Estilos generales de textos y elementos de lista */
+p, address, li {
+    color: rgb(234, 226, 183);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* Agrega separación inferior a las secciones */
+section {
+    margin-bottom: 3rem;
+}
+
+/* Agrega separación inferior a los artículos */
+article {
+    margin-bottom: 2rem;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilos generales de los enlaces */
+a {
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    border-radius: 1rem;
+}
+
+/* Estado normal de los enlaces */
+a:link {
+    color: rgb(92, 225, 230);
+}
+
+/* Estado de los enlaces ya visitados */
+a:visited {
+    color: rgb(168, 218, 220);
+}
+
+/* Estado cuando el cursor pasa sobre el enlace */
+a:hover {
+    background-color: rgb(0, 194, 209);
+    color: rgb(234, 226, 183);
+}
+
+/* Estado mientras se hace clic sobre el enlace */
+a:active {
+    background-color: rgb(234, 226, 183);
+    color: rgb(0, 48, 73);
+}
+
+/* Estados específicos del enlace del footer */
+.linkFooter:link {
+    color: rgb(115, 92, 230);
+}
+
+.linkFooter:visited {
+    color: rgb(179, 168, 220);
+}
+
+.linkFooter:hover {
+    background-color: rgb(63, 0, 209);
+    color: rgb(234, 226, 183);
+}
+
+.linkFooter:active {
+    background-color: rgb(234, 200, 183);
+    color: rgb(26, 0, 73);
+}
+
+/* Estilos generales de las imágenes */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+/* Estilos del video insertado */
+iframe {
+    width: 100%;
+    height: 18rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+/* Estilos generales de las listas */
+ul {
+    padding-left: 2rem;
+    color: rgb(234, 226, 183);
+}
+
+/* Línea horizontal de separación */
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 0.1rem solid rgb(234, 226, 183);
+}
+
+/* Centra el contenido del pie de página */
+footer {
+    text-align: center;
+}
+
+/* Distribución de las tres secciones de la página de inicio */
+.inicio {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Hace que las tres secciones ocupen el mismo espacio */
+.inicio section {
+    flex: 1;
+}
+
+/* Distribución de las dos columnas de la página de influencia */
+.influencia {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Columna izquierda de la página de tecnología */
+.izquierda {
+    flex: 1;
+}
+
+/* Columna derecha de la página de tecnología */
+.derecha {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Separa la imagen del video */
+.izquierda img {
+    margin-top: 2rem;
+}
+
+/* Contenedor de la imagen y elementos interactivos */
+#contenedorCodigoSistemas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*Contenedor de las imagenes de codigo y sistemas*/
+#imagenCodigoSistemas {
+    display: flex;
+}
+
+/* Tamaño y bordes de la imagen de codigo y sistemas */
+.imagenCodigoSistemas {
+    width: 400px;
+    height: 450px;
+    border-radius: 1rem;
+    margin: 4rem;
+}
+
+/* Contenedor de las obras generadas dinámicamente */
+#contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* Estilos generales de los botones */
+button {
+    background-color: rgb(0, 194, 209);
+    color: rgb(234, 226, 183);
+    border: none;
+    border-radius: 1rem;
+    padding: .8rem 1.4rem;
+    font-family: "Abel", sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+/* Cambio de apariencia del botón al pasar el cursor */
+button:hover {
+    background-color: rgb(92, 225, 230);
+    color: rgb(0, 48, 73);
+}
+
+/* Pequeña reducción del botón al hacer clic */
+button:active {
+    transform: scale(.97);
+}
+
