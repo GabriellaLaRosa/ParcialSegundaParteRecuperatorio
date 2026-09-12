@@ -12,7 +12,7 @@ body {
     background-image: url("../img/fondo.png");
     background-color: rgb(0, 48, 73);
     background-repeat: repeat;
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* Contenedor general del sitio */
@@ -23,6 +23,7 @@ body {
     padding: 2rem;
     background-color: rgba(0, 48, 73, .92);
     border-radius: 2rem;
+    border: 1px solid rgba(234, 226, 183, .2);
 }
 
 /* Centra el contenido del encabezado */
@@ -34,26 +35,29 @@ header {
 h1, h2, h3 {
     font-family: "Arvo", sans-serif;
     color: rgb(234, 226, 183);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.7rem;
+    line-height: 1.2;
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    line-height: 1.3;
 }
 
 h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
 }
 
-/* Estilos generales de textos y elementos de lista */
 p, address, li {
     color: rgb(234, 226, 183);
     margin-bottom: 1rem;
     font-size: 1rem;
+    line-height: 1.7;
 }
 
 /* Agrega separación inferior a las secciones */
@@ -81,6 +85,9 @@ a {
     text-decoration: none;
     padding: 0.7rem 1rem;
     border-radius: 1rem;
+    transition: .3s;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
 }
 
 /* Estado normal de los enlaces */
@@ -96,7 +103,7 @@ a:visited {
 /* Estado cuando el cursor pasa sobre el enlace */
 a:hover {
     background-color: rgb(0, 194, 209);
-    color: rgb(234, 226, 183);
+    color: rgb(0, 48, 73);
 }
 
 /* Estado mientras se hace clic sobre el enlace */
@@ -107,7 +114,7 @@ a:active {
 
 /* Estados específicos del enlace del footer */
 .linkFooter:link {
-    color: rgb(115, 92, 230);
+    color: rgb(92, 225, 230);
 }
 
 .linkFooter:visited {
@@ -115,8 +122,8 @@ a:active {
 }
 
 .linkFooter:hover {
-    background-color: rgb(63, 0, 209);
-    color: rgb(234, 226, 183);
+    background-color: rgb(0, 194, 209);
+    color: rgb(0, 48, 73);
 }
 
 .linkFooter:active {
@@ -129,6 +136,8 @@ img {
     width: 100%;
     height: auto;
     border-radius: 1rem;
+    border: 1px solid rgba(234, 226, 183, .25);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .2);
 }
 
 /* Estilos del video insertado */
@@ -155,6 +164,19 @@ hr {
 /* Centra el contenido del pie de página */
 footer {
     text-align: center;
+}
+
+blockquote {
+    border-left: 0.3rem solid rgb(0, 194, 209);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+}
+
+blockquote p {
+    font-family: "Arvo", sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: rgb(168, 218, 220);
 }
 
 /* Distribución de las tres secciones de la página de inicio */
@@ -213,6 +235,7 @@ footer {
     height: 450px;
     border-radius: 1rem;
     margin: 4rem;
+    border: 1px solid rgba(234, 226, 183, .25);
 }
 
 /* Contenedor de las obras generadas dinámicamente */
@@ -227,7 +250,7 @@ footer {
 /* Estilos generales de los botones */
 button {
     background-color: rgb(0, 194, 209);
-    color: rgb(234, 226, 183);
+    color: rgb(0, 48, 73);
     border: none;
     border-radius: 1rem;
     padding: .8rem 1.4rem;
@@ -235,6 +258,7 @@ button {
     font-size: 1.1rem;
     cursor: pointer;
     transition: .3s;
+    font-weight: bold;
 }
 
 /* Cambio de apariencia del botón al pasar el cursor */
@@ -248,3 +272,10 @@ button:active {
     transform: scale(.97);
 }
 
+#resultado {
+    color: rgb(234, 226, 183);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
