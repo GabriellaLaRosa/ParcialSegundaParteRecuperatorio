@@ -402,3 +402,32 @@ button:active {
     /* Centra el texto del resultado */
     text-align: center;
 }
+
+/* Contenedor individual de cada obra generada por JavaScript */
+.obra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    width: 400px;
+    height: 400px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, .05);
+    border-radius: 1rem;
+}
+
+/* Tamaño de las imágenes dentro de las obras */
+.obra img {
+    width: 350px;
+    height: 250px;
+}
+
+/* Estilos de las etiquetas de las obras */
+.obra label {
+    font-family: "Abel", sans-serif;
+    color: rgb(234, 226, 183);
+    font-size: 1.1rem;
+    text-align: center;
+}

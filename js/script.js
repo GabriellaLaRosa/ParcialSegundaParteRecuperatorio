@@ -4,8 +4,6 @@
 let diseño = document.querySelector("#diseño");
 let galeria = document.querySelector("#contenedor");
 
-//Oculto el botón para cambiar el diseño de la galeria
-diseño.style.display = 'none';
 
 //Array de objetos con las obras de Casey Reas
 let obras = [
@@ -52,7 +50,25 @@ window.addEventListener('load', function(e){
         </div>
         `
     });
+});
 
-    //Muestra el botón ppara cambiar el diseño de la galeria de arte
-    diseño.style.display = 'block';
+diseño.addEventListener('click', function(){
+
+    // Obtiene todas los elementos(contenedores) de la galería
+    let obras = document.querySelectorAll(".obra");
+
+    // Recorre cada de esos contenedores
+    for(let i = 0; i < obras.length; i++){
+
+        // Cambia el color de fondo y de texto de cada contenedor
+        obras[i].style.background = 'rgb(234, 226, 183, 0.5)';
+
+        // Busca el texto dentro del contenedor
+        let texto = obras[i].querySelector("label");
+
+        // Cambia el color del texto
+        texto.style.color = "rgba(2, 93, 116)";
+    }
+
+    diseño.style.display = 'none';
 });
