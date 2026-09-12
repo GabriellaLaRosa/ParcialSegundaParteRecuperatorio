@@ -14,3 +14,37 @@ body {
     background-repeat: repeat;
     font-family: Arial, sans-serif;
 }
+
+/* Contenedor general del sitio */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: rgba(0, 48, 73, .92);
+    border-radius: 2rem;
+}
+
+/* Centra el contenido del encabezado */
+header {
+    text-align: center;
+}
+
+/* Estilos generales de los títulos */
+h1, h2, h3 {
+    font-family: "Arvo", sans-serif;
+    color: rgb(234, 226, 183);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
