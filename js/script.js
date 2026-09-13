@@ -64,16 +64,16 @@ window.addEventListener('load', function(e){
 });
 
 //Cambiar el diseño de la galería de arte
-diseño.addEventListener('click', function(){
+disenio.addEventListener('click', function(){
 
-    // Obtiene todas los elementos(contenedores) de la galería
+    // Obtiene todos los elementos (contenedores) de la galería
     let obras = document.querySelectorAll(".obra");
 
-    // Recorre cada de esos contenedores
+    // Recorre cada uno de esos contenedores
     for(let i = 0; i < obras.length; i++){
 
-        // Cambia el color de fondo y de texto de cada contenedor
-        obras[i].style.background = 'rgb(234, 226, 183, 0.5)';
+        // Cambia el color de fondo de cada contenedor
+        obras[i].style.background = 'rgba(234, 226, 183, 0.5)';
 
         // Busca el texto dentro del contenedor
         let texto = obras[i].querySelector("label");
@@ -82,7 +82,7 @@ diseño.addEventListener('click', function(){
         texto.style.color = "rgb(2, 93, 116)";
     }
 
-    diseño.style.display = 'none';
+    disenio.style.display = 'none';
     cambiar.style.display = 'none';
 });
 
