@@ -13,7 +13,7 @@
 
         <!-- Tipografías de Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Abel&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Climate+Crisis:YEAR@1979&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     </head>
@@ -35,8 +35,8 @@
 
                         <!-- Enlaces a las diferentes páginas del sitio -->
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="codigo-sistemas.html">Código y Sistemas</a></li>
                         <li><a href="influencia.html">Influencia</a></li>
+                        <li><a href="codigo-sistemas.html">Código y Sistemas</a></li>
 
                     </ul>
                 </nav>
@@ -46,7 +46,7 @@
             <hr>
 
             <!-- Contenido principal de la página -->
-            <main>
+            <main id="contenidoPrincipalCodigoSistemas">
 
                 <!-- Título principal de la página -->
                 <h2>¿Cómo funciona el arte de Casey Reas?</h2>
@@ -73,33 +73,61 @@
 
                 </article>
 
-                <!-- Contenedor de la imagen y elementos interactivos -->
-                <div id="contenedorCodigoSistemas"> 
-                    
-                    <!-- Contenedor de las imágenes  -->
-                    <div i="imagenCodigoSistemas">
+                <!-- Sección de imágenes y elementos interactivos -->
+                <section id="contenedorCodigoSistemas">
+
+                    <!-- Encabezado de la sección -->
+                    <h3>Conocé más sobre Casey Reas</h3>
+
+                    <!-- Contenedor de las imágenes -->
+                    <div id="imagenCodigoSistemas">
 
                         <!-- Imagen de una obra de Casey Reas -->
-                        <img class="imagenCodigoSistemas" src="img/reas-3.jpg" alt="Obra Casey Reas">
+                        <img class="imagenCodigoSistemas" src="img/reas-3.jpg" alt="Obra de Casey Reas">
 
                         <!-- Otra imagen de una obra de Casey Reas -->
-                        <img class="imagenCodigoSistemas" src="img/reas-6.jpeg" alt="Obra Casey Reas">
+                        <img class="imagenCodigoSistemas" src="img/reas-6.jpeg" alt="Obra de Casey Reas">
 
                     </div>
 
-                    <!-- Botón que obtiene un dato curioso al azar mediante JavaScript -->
-                    <button type="button" id="dato">Obtener dato curioso al azar</button>
+                    <!-- Sección del dato curioso -->
+                    <section>
 
-                    <!-- Elemento donde se muestra el dato generado por JavaScript -->
-                    <span id="resultado"></span>
+                        <h3>Dato curioso</h3>
 
-                </div>
-                <!-- Contenedor vacío donde JavaScript genera dinámicamente una galeria de arte -->
-                <div id="contenedor">
-                    
-                </div>
-                <!-- Botón que permite cambiar el diseño de las obras mediante JavaScript -->
-                <button type="button" id="diseño">Cambiar diseño</button>
+                        <!-- Texto que acompaña al botón -->
+                        <label for="dato">Hacé clic en el siguiente botón para descubrir un dato curioso sobre el artista</label>
+
+                        <!-- Botón que obtiene un dato curioso al azar mediante JavaScript -->
+                        <button type="button" id="dato">Obtener dato curioso al azar</button>
+
+                        <!-- Elemento donde se muestra el dato generado por JavaScript -->
+                        <span id="resultado"></span>
+
+                    </section>
+
+                </section>
+
+                <!-- Sección de galería de arte interactiva -->
+                <section class="galeria">
+
+                    <!-- Encabezado de la galería -->
+                    <h3>Galería de arte</h3>
+
+                    <p>Explorá algunas obras de Casey Reas generadas a partir de sistemas y reglas visuales.</p>
+
+                    <!-- Contenedor vacío donde JavaScript genera dinámicamente la galería -->
+                    <div id="contenedor">
+                        <!-- Las obras se agregan mediante JavaScript -->
+                    </div>
+
+                    <!-- Texto que explica la interacción del diseño -->
+                    <label for="diseño" id="cambiar">Podés alternar el aspecto visual de las obras haciendo click en el siguiente botón.</label>
+
+                    <!-- Botón que permite cambiar el diseño de las obras mediante JavaScript -->
+                    <button type="button" id="diseño">Cambiar diseño</button>
+
+                </section>
 
             </main>
 

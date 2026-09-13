@@ -2,11 +2,12 @@
 
 // Captura de los elementos del HTML en variables
 let diseño = document.querySelector("#diseño");
+let cambiar = document.querySelector("#cambiar");
 let galeria = document.querySelector("#contenedor");
 
 
 //Array de objetos con las obras de Casey Reas
-let obras = [
+let obrasArray = [
     {
         obra: "Process 4",
         año: 2005,
@@ -30,7 +31,7 @@ let obras = [
         año: 2010,
         imagen: "img/galeria-de-arte/process-compendium-2004-2010-2010.jpg"
     },
-    
+
     {
         obra: "Network C",
         año: 2012,
@@ -42,18 +43,25 @@ let obras = [
 window.addEventListener('load', function(e){
 
     // Por cada elemento del array obra, inserta el código HTML con la información de cada obra dentro del contenedor
-    let i = obras.length;
-    while(i>0){
+    let i = obrasArray.length;
+
+    while(i > 0){
+
         galeria.innerHTML += `
         <div class="obra">
-            <label for="obra">${obras[obras.length - i].obra} - ${obras[obras.length - i].año}</label>
-            <img src="${obras[obras.length - i].imagen}" alt="${obras[obras.length - i].obra} - ${obras[obras.length - i].año}" id="obra">
+            <label for="${obrasArray.length - i}">
+                ${obrasArray[obrasArray.length - i].obra} - ${obrasArray[obrasArray.length - i].año}
+            </label>
+
+            <img src="${obrasArray[obrasArray.length - i].imagen}"
+                 alt="${obrasArray[obrasArray.length - i].obra} - ${obrasArray[obrasArray.length - i].año}"
+                 id="${obrasArray.length - i}">
         </div>
-        `
+        `;
+
         i--;
     }
 });
-
 
 //Cambiar el diseño de la galería de arte
 diseño.addEventListener('click', function(){
@@ -75,6 +83,7 @@ diseño.addEventListener('click', function(){
     }
 
     diseño.style.display = 'none';
+    cambiar.style.display = 'none';
 });
 
 //Dato curioso al azar

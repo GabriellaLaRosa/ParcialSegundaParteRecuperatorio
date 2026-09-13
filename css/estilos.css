@@ -16,14 +16,14 @@ body {
     background-repeat: repeat;
 
     /* Tipografía general del sitio */
-    font-family: "Montserrat", sans-serif;
+    font-family: "Abel", sans-serif;
 }
 
 /* Contenedor general del sitio */
 .contenedor {
-    /*tamaño*/
+    /* Tamaño adaptable */
     width: 90%;
-    max-width: 1200px;
+    max-width: 90%;
 
     /* Separación exterior e interior del contenedor */
     margin: 2rem 0;
@@ -35,6 +35,12 @@ body {
     /* Bordes redondeados y borde sutil */
     border-radius: 2rem;
     border: 1px solid rgba(234, 226, 183, .2);
+}
+
+#contenidoPrincipalCodigoSistemas{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 /* Centra el contenido del encabezado */
@@ -82,11 +88,18 @@ p, address, li {
     line-height: 1.7;
 }
 
+label{
+    color: rgb(234, 226, 183);
+    font-size: 1.3rem;
+
+    /* Aumenta el espacio entre las líneas para facilitar la lectura */
+    line-height: 1.7;
+}
+
 /* Agrega separación inferior a cada sección */
 section {
     margin-bottom: 3rem;
 }
-
 
 /* Agrega separación inferior a cada artículo */
 article {
@@ -124,7 +137,7 @@ a {
     transition: .3s;
 
     /* Tipografía y grosor de los enlaces */
-    font-family: "Montserrat", sans-serif;
+    font-family: "Abel", sans-serif;
     font-weight: 600;
 }
 
@@ -248,7 +261,7 @@ blockquote p {
     color: rgb(168, 218, 220);
 }
 
-/* Distribuye las tres secciones de la página de inicio*/
+/* Distribuye las tres secciones de la página de inicio */
 .inicio {
     display: flex;
     gap: 2rem;
@@ -297,21 +310,44 @@ blockquote p {
     gap: 2rem;
 }
 
+/* Organiza verticalmente los elementos de la sección Dato curioso */
+#contenedorCodigoSistemas section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+/* Evita que el texto del label quede demasiado ancho */
+#contenedorCodigoSistemas section label {
+    max-width: 40rem;
+    text-align: center;
+}
+
+/* Separa el resultado del botón */
+#contenedorCodigoSistemas section #resultado {
+    margin-top: 1rem;
+}
+
 /* Contenedor de las imágenes de la sección Código y sistemas */
 #imagenCodigoSistemas {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* Tamaño y estilos de las imágenes de Código y sistemas */
 .imagenCodigoSistemas {
-    width: 400px;
-    height: 450px;
+    width: 100%;
+    max-width: 25rem;
+    height: auto;
 
     /* Redondea las esquinas de las imágenes */
     border-radius: 1rem;
 
     /* Agrega separación alrededor de las imágenes */
-    margin: 4rem;
+    margin: 6rem;
 
     /* Agrega un borde sutil */
     border: 1px solid rgba(234, 226, 183, .25);
@@ -389,7 +425,7 @@ button:active {
     background-color: rgba(255, 255, 255, .08);
 
     /* Borde turquesa */
-    border: 2px solid rgb(0, 194, 209);
+    border: 0.125rem solid rgb(0, 194, 209);
 
     /* Redondea las esquinas */
     border-radius: 1rem;
@@ -411,8 +447,12 @@ button:active {
     justify-content: center;
     text-align: center;
     gap: 2rem;
-    width: 400px;
-    height: 400px;
+
+    /* Tamaño adaptable */
+    width: 100%;
+    max-width: 25rem;
+    height: auto;
+
     padding: 1rem;
     background: rgba(255, 255, 255, .05);
     border-radius: 1rem;
@@ -420,8 +460,9 @@ button:active {
 
 /* Tamaño de las imágenes dentro de las obras */
 .obra img {
-    width: 350px;
-    height: 250px;
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
 }
 
 /* Estilos de las etiquetas de las obras */
@@ -429,5 +470,19 @@ button:active {
     font-family: "Abel", sans-serif;
     color: rgb(234, 226, 183);
     font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Organiza verticalmente los elementos de la galería */
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Evita que el texto de la galería quede demasiado ancho */
+.galeria label {
+    max-width: 40rem;
     text-align: center;
 }
