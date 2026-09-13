@@ -137,3 +137,255 @@ botonDato.addEventListener("click", function() {
     // Muestra en pantalla el dato que se encuentra en la posición aleatoria del array
     respuesta.innerText = datosCuriosos[numRandom];
 });
+
+//Realización de ejercicio
+
+// Captura de los elementos del HTML
+let cantidadInstalacionesInput = document.querySelector("#cantidadInstalaciones");
+let nombreInstalacionInput = document.querySelector("#nombreInstalacion");
+let personasInstalacionInput = document.querySelector("#personasInstalacion");
+let diasInstalacionInput = document.querySelector("#diasInstalacion");
+let horasDiaInput = document.querySelector("#horasDia");
+let honorarioHoraInput = document.querySelector("#honorarioHora");
+
+// Captura de los botones
+let btnCantidad = document.querySelector("#btnCantidad");
+let btnInstalacion = document.querySelector("#btnInstalacion");
+let btnCalcular = document.querySelector("#btnCalcular");
+let btnReiniciar = document.querySelector("#btnReiniciar");
+
+// Captura de los contenedores donde se mostrarán los datos
+let instalacionesCargadas = document.querySelector("#instalacionesCargadas");
+let resultados = document.querySelector("#resultados");
+
+// Variables para guardar los datos
+let cantidadInstalaciones = 0;
+let instalaciones = [];
+
+let horasDia = 0;
+let honorarioHora = 0;
+
+//Confirmar cantidad de instalaciones
+btnCantidad.addEventListener("click", function() {
+
+    cantidadInstalaciones = Number(cantidadInstalacionesInput.value);
+
+    // Validamos la cantidad ingresada
+    if (cantidadInstalaciones <= 0 || isNaN(cantidadInstalaciones) || !Number.isInteger(cantidadInstalaciones)) {
+        //!Number.isInteger(cantidadInstalaciones) -> Valida que el número sea entero
+        alert("Ingresá una cantidad entera mayor que cero.");
+    } else {
+        // Deshabilitamos la cantidad de instalaciones porque ya fue confirmada
+        cantidadInstalacionesInput.disabled = true;
+        btnCantidad.disabled = true;
+
+        // Habilitamos los datos de la primera instalación
+        nombreInstalacionInput.disabled = false;
+        personasInstalacionInput.disabled = false;
+        diasInstalacionInput.disabled = false;
+        btnInstalacion.disabled = false;
+    }
+});
+
+//Agregar instalación
+btnInstalacion.addEventListener("click", function() {
+
+    let nombre = nombreInstalacionInput.value.trim(); //.trim() -> quita los espacios que están al principio y al final del texto
+    let personas = Number(personasInstalacionInput.value);
+    let dias = Number(diasInstalacionInput.value);
+
+    // Validamos el nombre
+    if (nombre === "") {
+        alert("Ingresá el nombre de la instalación.");
+        return;
+    }
+
+    // Validamos la cantidad de personas
+    if (personas <= 0 || isNaN(personas) || !Number.isInteger(personas)) {
+        alert("La cantidad de personas debe ser un número entero mayor que cero.");
+        return;
+    }
+
+    // Validamos los días
+    if (dias <= 0 || isNaN(dias) ||!Number.isInteger(dias)) {
+        alert("La cantidad de días debe ser un número entero mayor que cero.");
+        return;
+    }
+
+    // Guardamos los datos en un objeto
+    let instalacion = {
+        nombre: nombre,
+        personas: personas,
+        dias: dias
+    };
+
+    // Agregamos el objeto al array
+    instalaciones.push(instalacion);
+
+    // Mostramos la instalación cargada
+    instalacionesCargadas.innerHTML += `
+        <div class="instalacionCargada">
+            <p>
+                <strong>${nombre}</strong><br>
+                Personas necesarias: ${personas}<br>
+                Días estimados: ${dias}
+            </p>
+        </div>
+    `;
+
+    // Limpiamos los campos
+    nombreInstalacionInput.value = "";
+    personasInstalacionInput.value = "";
+    diasInstalacionInput.value = "";
+
+    // Cuando se cargan todas las instalaciones
+    if (instalaciones.length === cantidadInstalaciones) {
+
+        // Deshabilitamos los campos de instalaciones
+        nombreInstalacionInput.disabled = true;
+        personasInstalacionInput.disabled = true;
+        diasInstalacionInput.disabled = true;
+        btnInstalacion.disabled = true;
+
+        // Habilitamos los datos generales del estudio
+        horasDiaInput.disabled = false;
+        honorarioHoraInput.disabled = false;
+        btnCalcular.disabled = false;
+
+        alert("Se cargaron todas las instalaciones. Ahora ingresá los datos del estudio.");
+    }
+});
+
+//Calcular resultados
+btnCalcular.addEventListener("click", function() {
+
+    horasDia = Number(horasDiaInput.value);
+    honorarioHora = Number(honorarioHoraInput.value);
+
+    // Validamos las horas por día
+    if (horasDia <= 0 || isNaN(horasDia) || !Number.isInteger(horasDia)) {
+        alert("Ingresá una cantidad entera de horas mayor que cero.");
+        return;
+    }
+
+    // Validamos el honorario
+    if (honorarioHora <= 0 || isNaN(honorarioHora)) {
+        alert("Ingresá un honorario mayor que cero.");
+        return;
+    }
+
+    // Deshabilitamos los datos generales
+    horasDiaInput.disabled = true;
+    honorarioHoraInput.disabled = true;
+    btnCalcular.disabled = true;
+
+    //Cálculo costo de un día
+    let totalPersonas = 0;
+
+    for (let i = 0; i < instalaciones.length; i++) {
+        totalPersonas += instalaciones[i].personas;
+    }
+
+    let costoDia = totalPersonas * horasDia * honorarioHora;
+
+    //Cálculo instación de más días
+    let instalacionMayor = instalaciones[0];
+
+    for (let i = 1; i < instalaciones.length; i++) {
+        if (instalaciones[i].dias > instalacionMayor.dias) {
+            instalacionMayor = instalaciones[i];
+        }
+    }
+
+    let costoInstalacionMayor =
+        instalacionMayor.personas *
+        instalacionMayor.dias *
+        horasDia *
+        honorarioHora;
+
+    //Cálculo del costo total del estudio
+    let costoTotalEstudio = 0;
+
+    for (let i = 0; i < instalaciones.length; i++) {
+        let costoInstalacion =
+            instalaciones[i].personas *
+            instalaciones[i].dias *
+            horasDia *
+            honorarioHora;
+
+        costoTotalEstudio += costoInstalacion;
+    }
+
+    let porcentajeMayor = (costoInstalacionMayor / costoTotalEstudio) * 100;
+
+    //Mostrar resultados
+    resultados.innerHTML = `
+        <h4>Resultados de la producción</h4>
+
+        <p>
+            <strong>1. Costo total de un día de trabajo:</strong><br>
+            $${costoDia.toFixed(2)} 
+        </p> 
+
+        <p>
+            <strong>2. Instalación que necesita más días:</strong><br>
+            ${instalacionMayor.nombre}<br>
+            Días de producción: ${instalacionMayor.dias}<br>
+            Costo total: $${costoInstalacionMayor.toFixed(2)}
+        </p>
+
+        <p>
+            <strong>3. Porcentaje del costo total del estudio:</strong><br>
+            ${porcentajeMayor.toFixed(2)}%
+        </p>
+    `; //toFixed() -> sirve para mostrar un número con una cantidad determinada de decimales
+
+    // Mostramos los resultados
+    resultados.style.display = "block";
+
+    // Habilitamos el botón de reinicio
+    btnReiniciar.disabled = false;
+
+});
+
+//Reiniciar
+btnReiniciar.addEventListener("click", function() {
+
+    // Reiniciamos las variables
+    cantidadInstalaciones = 0;
+    instalaciones = [];
+    horasDia = 0;
+    honorarioHora = 0;
+
+    // Limpiamos los resultados anteriores
+    instalacionesCargadas.innerHTML = "";
+    resultados.innerHTML = "";
+
+    // Habilitamos nuevamente la cantidad
+    cantidadInstalacionesInput.disabled = false;
+    btnCantidad.disabled = false;
+
+    // Deshabilitamos los demás campos
+    nombreInstalacionInput.disabled = true;
+    personasInstalacionInput.disabled = true;
+    diasInstalacionInput.disabled = true;
+    btnInstalacion.disabled = true;
+
+    horasDiaInput.disabled = true;
+    honorarioHoraInput.disabled = true;
+    btnCalcular.disabled = true;
+
+    // Ocultamos los resultados
+    resultados.style.display = "none";
+
+    // Deshabilitamos el botón de reinicio
+    btnReiniciar.disabled = true;
+
+    // Limpiamos todos los campos
+    cantidadInstalacionesInput.value = "";
+    nombreInstalacionInput.value = "";
+    personasInstalacionInput.value = "";
+    diasInstalacionInput.value = "";
+    horasDiaInput.value = "";
+    honorarioHoraInput.value = "";
+});
