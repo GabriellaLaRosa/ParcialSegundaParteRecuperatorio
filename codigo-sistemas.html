@@ -14,8 +14,8 @@
         <!-- Tipografías de Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Climate+Crisis:YEAR@1979&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
     </head>
 
     <body>
@@ -122,10 +122,138 @@
                     </div>
 
                     <!-- Texto que explica la interacción del diseño -->
-                    <label for="diseño" id="cambiar">Podés alternar el aspecto visual de las obras haciendo click en el siguiente botón.</label>
+                    <label for="disenio" id="cambiar">Podés alternar el aspecto visual de las obras haciendo click en el siguiente botón.</label>
 
                     <!-- Botón que permite cambiar el diseño de las obras mediante JavaScript -->
-                    <button type="button" id="diseño">Cambiar diseño</button>
+                    <button type="button" id="disenio">Cambiar diseño</button>
+
+                </section>
+
+                <!-- Sección para gestionar la producción de instalaciones -->
+                <section id="produccion">
+
+                    <!-- Título de la sección -->
+                    <h3>Gestión de producción de instalaciones interactivas</h3>
+
+                    <!-- Un único formulario para todos los datos -->
+                    <form id="formProduccion">
+
+                        <!-- Grupo para ingresar la cantidad de instalaciones -->
+                        <fieldset>
+
+                            <legend>Cantidad de instalaciones</legend>
+
+                            <label for="cantidadInstalaciones">
+                                Ingresá la cantidad de instalaciones a producir:
+                            </label>
+
+                            <input
+                                type="number"
+                                id="cantidadInstalaciones"
+                                min="1"
+                                required
+                            >
+
+                            <button type="button" id="btnCantidad">
+                                Confirmar cantidad
+                            </button>
+
+                        </fieldset>
+
+                        <!-- Grupo para ingresar los datos de cada instalación -->
+                        <fieldset id="datosInstalacion">
+
+                            <legend>Datos de la instalación</legend>
+
+                            <label for="nombreInstalacion">
+                                Nombre de la instalación:
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombreInstalacion"
+                                required
+                                disabled
+                            >
+
+                            <label for="personasInstalacion">
+                                Cantidad de personas necesarias:
+                            </label>
+
+                            <input
+                                type="number"
+                                id="personasInstalacion"
+                                min="1"
+                                required
+                                disabled
+                            >
+
+                            <label for="diasInstalacion">
+                                Cantidad de días estimados:
+                            </label>
+
+                            <input
+                                type="number"
+                                id="diasInstalacion"
+                                min="1"
+                                required
+                                disabled
+                            >
+
+                            <button type="button" id="btnInstalacion" disabled>
+                                Agregar instalación
+                            </button>
+
+                        </fieldset>
+
+                        <!-- Grupo para ingresar los datos generales -->
+                        <fieldset id="datosEstudio">
+
+                            <legend>Datos generales del estudio</legend>
+
+                            <label for="horasDia">
+                                Cantidad de horas de trabajo por día:
+                            </label>
+
+                            <input
+                                type="number"
+                                id="horasDia"
+                                min="1"
+                                required
+                                disabled
+                            >
+
+                            <label for="honorarioHora">
+                                Valor del honorario por hora:
+                            </label>
+
+                            <input
+                                type="number"
+                                id="honorarioHora"
+                                min="0.01"
+                                step="0.01"
+                                required
+                                disabled
+                            >
+
+                            <button type="button" id="btnCalcular" disabled>
+                                Calcular resultados
+                            </button>
+
+                        </fieldset>
+
+                    </form>
+
+                    <!-- Lugar donde se muestran las instalaciones cargadas -->
+                    <div id="instalacionesCargadas"></div>
+
+                    <!-- Lugar donde se muestran los resultados -->
+                    <div id="resultados"></div>
+
+                    <!-- Botón para reiniciar el ejercicio -->
+                    <button type="button" id="btnReiniciar" disabled>
+                        Reiniciar
+                    </button>
 
                 </section>
 

@@ -1,7 +1,7 @@
 //Galería de arte
 
 // Captura de los elementos del HTML en variables
-let diseño = document.querySelector("#diseño");
+let disenio = document.querySelector("#disenio");
 let cambiar = document.querySelector("#cambiar");
 let galeria = document.querySelector("#contenedor");
 
@@ -10,31 +10,31 @@ let galeria = document.querySelector("#contenedor");
 let obrasArray = [
     {
         obra: "Process 4",
-        año: 2005,
+        anio: 2005,
         imagen: "img/galeria-de-arte/process-4-2005.jpg"
     },
 
     {
         obra: "Process 6",
-        año: 2005,
+        anio: 2005,
         imagen: "img/galeria-de-arte/process-6-2005.jpg"
     },
 
     {
         obra: "Process 18",
-        año: 2010,
+        anio: 2010,
         imagen: "img/galeria-de-arte/process-18-2010.jpg"
     },
 
     {
         obra: "Process Compendium 2004-2010",
-        año: 2010,
+        anio: 2010,
         imagen: "img/galeria-de-arte/process-compendium-2004-2010-2010.jpg"
     },
 
     {
         obra: "Network C",
-        año: 2012,
+        anio: 2012,
         imagen: "img/galeria-de-arte/network-c-2012.png"
     }
 ];
@@ -50,11 +50,11 @@ window.addEventListener('load', function(e){
         galeria.innerHTML += `
         <div class="obra">
             <label for="${obrasArray.length - i}">
-                ${obrasArray[obrasArray.length - i].obra} - ${obrasArray[obrasArray.length - i].año}
+                ${obrasArray[obrasArray.length - i].obra} - ${obrasArray[obrasArray.length - i].anio}
             </label>
 
             <img src="${obrasArray[obrasArray.length - i].imagen}"
-                 alt="${obrasArray[obrasArray.length - i].obra} - ${obrasArray[obrasArray.length - i].año}"
+                 alt="${obrasArray[obrasArray.length - i].obra} - ${obrasArray[obrasArray.length - i].anio}"
                  id="${obrasArray.length - i}">
         </div>
         `;
@@ -79,7 +79,7 @@ diseño.addEventListener('click', function(){
         let texto = obras[i].querySelector("label");
 
         // Cambia el color del texto
-        texto.style.color = "rgba(2, 93, 116)";
+        texto.style.color = "rgb(2, 93, 116)";
     }
 
     diseño.style.display = 'none';
@@ -132,8 +132,8 @@ botonDato.addEventListener("click", function() {
     // Math.random() genera un número decimal entre 0 y 1
     // Math.random() * 10 lo lleva a un número entre 0 y 9.999...
     // Math.floor() elimina los decimales y deja un número entero
-    numRandom = Math.floor(Math.random() * 10);
+    numRandom = Math.floor(Math.random() * datosCuriosos.length);
 
     // Muestra en pantalla el dato que se encuentra en la posición aleatoria del array
-    respuesta.innerText = `${datosCuriosos[numRandom]}`;
+    respuesta.innerText = datosCuriosos[numRandom];
 });
