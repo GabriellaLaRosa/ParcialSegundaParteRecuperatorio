@@ -49,13 +49,10 @@ window.addEventListener('load', function(e){
 
         galeria.innerHTML += `
         <div class="obra">
-            <label for="${obrasArray.length - i}">
-                ${obrasArray[obrasArray.length - i].obra} - ${obrasArray[obrasArray.length - i].anio}
-            </label>
-
             <img src="${obrasArray[obrasArray.length - i].imagen}"
-                 alt="${obrasArray[obrasArray.length - i].obra} - ${obrasArray[obrasArray.length - i].anio}"
-                 id="${obrasArray.length - i}">
+                alt="${obrasArray[obrasArray.length - i].obra} - ${obrasArray[obrasArray.length - i].anio}">
+
+            <p>${obrasArray[obrasArray.length - i].obra} - ${obrasArray[obrasArray.length - i].anio}</p>
         </div>
         `;
 
@@ -76,7 +73,7 @@ disenio.addEventListener('click', function(){
         obras[i].style.background = 'rgba(234, 226, 183, 0.5)';
 
         // Busca el texto dentro del contenedor
-        let texto = obras[i].querySelector("label");
+        let texto = obras[i].querySelector("p");
 
         // Cambia el color del texto
         texto.style.color = "rgb(2, 93, 116)";
@@ -335,7 +332,7 @@ btnCalcular.addEventListener("click", function() {
         </p>
 
         <p>
-            <strong>3. Porcentaje del costo total del estudio:</strong><br>
+            <strong>3. Porcentaje del costo total del estudio que representa el costo de la instalación de más días de producción:</strong><br>
             ${porcentajeMayor.toFixed(2)}%
         </p>
     `; //toFixed() -> sirve para mostrar un número con una cantidad determinada de decimales

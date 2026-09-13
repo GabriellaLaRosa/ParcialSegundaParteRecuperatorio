@@ -23,7 +23,7 @@ body {
 .contenedor {
     /* Tamaño adaptable */
     width: 90%;
-    max-width: 90%;
+    max-width: 90rem;
 
     /* Separación exterior e interior del contenedor */
     margin: 2rem 0;
@@ -34,7 +34,7 @@ body {
 
     /* Bordes redondeados y borde sutil */
     border-radius: 2rem;
-    border: 1px solid rgba(234, 226, 183, .2);
+    border: 0.0625rem solid rgba(234, 226, 183, .2);
 }
 
 #contenidoPrincipalCodigoSistemas{
@@ -197,7 +197,7 @@ img {
     border-radius: 1rem;
 
     /* Agrega un borde sutil */
-    border: 1px solid rgba(234, 226, 183, .25);
+    border: 0.0625rem solid rgba(234, 226, 183, .25);
 
     /* Agrega una sombra suave */
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .2);
@@ -350,7 +350,7 @@ blockquote p {
     margin: 6rem;
 
     /* Agrega un borde sutil */
-    border: 1px solid rgba(234, 226, 183, .25);
+    border: 0.0625rem solid rgba(234, 226, 183, .25);
 }
 
 /* Contenedor donde se agregan las obras generadas dinámicamente */
@@ -466,10 +466,10 @@ button:active {
 }
 
 /* Estilos de las etiquetas de las obras */
-.obra label {
+.obra p {
     font-family: "Abel", sans-serif;
     color: rgb(234, 226, 183);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     text-align: center;
 }
 
@@ -513,7 +513,7 @@ button:active {
     width: 100%;
     max-width: 35rem;
     padding: 1.5rem;
-    border: 1px solid rgba(234, 226, 183, .25);
+    border: 0.0625rem solid rgba(234, 226, 183, .25);
     border-radius: 1rem;
     background-color: rgba(255, 255, 255, .05);
 }
@@ -554,7 +554,7 @@ button:active {
 .instalacionCargada {
     margin-bottom: 1rem;
     padding: 1rem;
-    border: 1px solid rgba(234, 226, 183, .25);
+    border: 0.0625rem solid rgba(234, 226, 183, .25);
     border-radius: 1rem;
     background-color: rgba(255, 255, 255, .05);
 }
@@ -567,6 +567,6 @@ button:active {
     padding: 1.5rem;
     color: rgb(234, 226, 183);
     text-align: center;
-    border: 2px solid rgb(0, 194, 209);
+    border: 0.125rem solid rgb(0, 194, 209);
     border-radius: 1rem;
 }
